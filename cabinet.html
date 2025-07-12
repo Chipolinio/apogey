@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - ИКИТ СИЛА</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <span>И</span>
+                        <span>С</span>
+                    </div>
+                    <div class="logo-text">
+                        <h1>ИКИТ СИЛА</h1>
+                        <p>Личный кабинет</p>
+                    </div>
+                </div>
+                
+                <div class="header-controls">
+                    <button class="btn-login" onclick="window.location.href='index.html'">На главную</button>
+                    <button class="btn-logout" id="logoutBtn">Выйти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cabinet-main">
+        <div class="container">
+            <div class="cabinet-layout">
+                <aside class="cabinet-sidebar">
+                    <nav class="cabinet-nav">
+                        <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                            <span class="nav-icon">📊</span>
+                            Главная
+                        </a>
+                        <a href="#contracts" class="nav-item" data-section="contracts">
+                            <span class="nav-icon">📋</span>
+                            Договоры
+                        </a>
+                        <a href="#documents" class="nav-item" data-section="documents">
+                            <span class="nav-icon">📁</span>
+                            Документы
+                        </a>
+                        <a href="#messages" class="nav-item" data-section="messages">
+                            <span class="nav-icon">💬</span>
+                            Сообщения
+                        </a>
+                        <a href="#profile" class="nav-item" data-section="profile">
+                            <span class="nav-icon">👤</span>
+                            Профиль
+                        </a>
+                    </nav>
+                </aside>
+
+                <div class="cabinet-content">
+                    <!-- Dashboard Section -->
+                    <section id="dashboard" class="cabinet-section active">
+                        <h2>Добро пожаловать, Иван Петрович!</h2>
+                        
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">📊</div>
+                                <div class="stat-info">
+                                    <h3>Активных договоров</h3>
+                                    <span class="stat-number">3</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">📁</div>
+                                <div class="stat-info">
+                                    <h3>Документов</h3>
+                                    <span class="stat-number">24</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">💬</div>
+                                <div class="stat-info">
+                                    <h3>Новых сообщений</h3>
+                                    <span class="stat-number">2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recent-activity">
+                            <h3>Последняя активность</h3>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <span class="activity-date">15.12.2024</span>
+                                    <span class="activity-text">Загружен отчет за ноябрь 2024</span>
+                                </div>
+                                <div class="activity-item">
+                                    <span class="activity-date">12.12.2024</span>
+                                    <span class="activity-text">Получено сообщение от менеджера</span>
+                                </div>
+                                <div class="activity-item">
+                                    <span class="activity-date">10.12.2024</span>
+                                    <span class="activity-text">Подписан дополнительный договор</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contracts Section -->
+                    <section id="contracts" class="cabinet-section">
+                        <h2>Договоры и контракты</h2>
+                        
+                        <div class="contracts-list">
+                            <div class="contract-card">
+                                <div class="contract-header">
+                                    <h3>Договор №001/2024</h3>
+                                    <span class="contract-status active">Активный</span>
+                                </div>
+                                <div class="contract-details">
+                                    <p><strong>Услуга:</strong> Ведение бухгалтерского учета</p>
+                                    <p><strong>Период:</strong> 01.01.2024 - 31.12.2024</p>
+                                    <p><strong>Стоимость:</strong> 25 000 руб/мес</p>
+                                </div>
+                                <div class="contract-actions">
+                                    <button class="btn-secondary">Скачать</button>
+                                    <button class="btn-secondary">Детали</button>
+                                </div>
+                            </div>
+
+                            <div class="contract-card">
+                                <div class="contract-header">
+                                    <h3>Договор №045/2023</h3>
+                                    <span class="contract-status completed">Завершен</span>
+                                </div>
+                                <div class="contract-details">
+                                    <p><strong>Услуга:</strong> Расчет заработной платы</p>
+                                    <p><strong>Период:</strong> 01.06.2023 - 31.12.2023</p>
+                                    <p><strong>Стоимость:</strong> 15 000 руб/мес</p>
+                                </div>
+                                <div class="contract-actions">
+                                    <button class="btn-secondary">Скачать</button>
+                                    <button class="btn-secondary">Детали</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Documents Section -->
+                    <section id="documents" class="cabinet-section">
+                        <h2>Документы</h2>
+                        
+                        <div class="documents-header">
+                            <button class="btn-primary" id="uploadBtn">Загрузить документ</button>
+                        </div>
+
+                        <div class="documents-list">
+                            <div class="document-item">
+                                <div class="document-icon">📄</div>
+                                <div class="document-info">
+                                    <h4>Отчет за ноябрь 2024.pdf</h4>
+                                    <span class="document-date">15.12.2024</span>
+                                </div>
+                                <div class="document-actions">
+                                    <button class="btn-secondary">Скачать</button>
+                                </div>
+                            </div>
+
+                            <div class="document-item">
+                                <div class="document-icon">📊</div>
+                                <div class="document-info">
+                                    <h4>Баланс на 01.12.2024.xlsx</h4>
+                                    <span class="document-date">01.12.2024</span>
+                                </div>
+                                <div class="document-actions">
+                                    <button class="btn-secondary">Скачать</button>
+                                </div>
+                            </div>
+
+                            <div class="document-item">
+                                <div class="document-icon">📋</div>
+                                <div class="document-info">
+                                    <h4>Справка о доходах.pdf</h4>
+                                    <span class="document-date">25.11.2024</span>
+                                </div>
+                                <div class="document-actions">
+                                    <button class="btn-secondary">Скачать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Messages Section -->
+                    <section id="messages" class="cabinet-section">
+                        <h2>Сообщения</h2>
+                        
+                        <div class="messages-container">
+                            <div class="message-item">
+                                <div class="message-header">
+                                    <strong>Анна Сергеевна (Менеджер)</strong>
+                                    <span class="message-date">12.12.2024 14:30</span>
+                                </div>
+                                <div class="message-content">
+                                    <p>Добрый день! Подготовили отчет за ноябрь. Все документы загружены в ваш кабинет. Есть несколько вопросов по новым операциям.</p>
+                                </div>
+                            </div>
+
+                            <div class="message-item sent">
+                                <div class="message-header">
+                                    <strong>Вы</strong>
+                                    <span class="message-date">12.12.2024 15:45</span>
+                                </div>
+                                <div class="message-content">
+                                    <p>Спасибо! Отчет получил. По новым операциям созвонимся завтра утром.</p>
+                                </div>
+                            </div>
+
+                            <div class="message-item">
+                                <div class="message-header">
+                                    <strong>Анна Сергеевна (Менеджер)</strong>
+                                    <span class="message-date">13.12.2024 09:15</span>
+                                </div>
+                                <div class="message-content">
+                                    <p>Отлично! Жду вашего звонка. Подготовлю все необходимые документы.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="message-form">
+                            <form id="messageForm">
+                                <div class="form-group">
+                                    <textarea id="messageText" placeholder="Введите ваше сообщение..." rows="3" required></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary">Отправить</button>
+                            </form>
+                        </div>
+                    </section>
+
+                    <!-- Profile Section -->
+                    <section id="profile" class="cabinet-section">
+                        <h2>Профиль</h2>
+                        
+                        <form class="profile-form" id="profileForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profileName">Имя</label>
+                                    <input type="text" id="profileName" value="Иван" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profileSurname">Фамилия</label>
+                                    <input type="text" id="profileSurname" value="Петров" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profileEmail">Email</label>
+                                    <input type="email" id="profileEmail" value="ivan.petrov@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profilePhone">Телефон</label>
+                                    <input type="tel" id="profilePhone" value="+7 (391) 123-45-67" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profileCompany">Компания</label>
+                                <input type="text" id="profileCompany" value="ООО 'Пример'">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profileAddress">Адрес</label>
+                                <textarea id="profileAddress" rows="2">г. Красноярск, ул. Примерная, д. 123</textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary">Сохранить изменения</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Upload Modal -->
+    <div class="modal" id="uploadModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Загрузить документ</h2>
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label for="uploadFile">Выберите файл</label>
+                    <input type="file" id="uploadFile" name="file" accept=".pdf,.doc,.docx,.xls,.xlsx" required>
+                </div>
+                <div class="form-group">
+                    <label for="uploadDescription">Описание</label>
+                    <input type="text" id="uploadDescription" name="description" placeholder="Краткое описание документа">
+                </div>
+                <button type="submit" class="btn-primary">Загрузить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

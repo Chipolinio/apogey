@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИКИТ СИЛА - Профессиональные бухгалтерские услуги</title>
+    <meta name="description" content="Профессиональные бухгалтерские услуги в Красноярске. Ведение учета, расчет зарплаты, налоговое консультирование. 97% клиентов обращаются повторно.">
+    <meta name="keywords" content="бухгалтерские услуги, ведение учета, расчет зарплаты, налоги, Красноярск">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=your-api-key&lang=ru_RU" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <span>И</span>
+                        <span>С</span>
+                    </div>
+                    <div class="logo-text">
+                        <h1>ИКИТ СИЛА</h1>
+                        <p>Бухгалтерские услуги</p>
+                    </div>
+                </div>
+                
+                <div class="header-controls">
+                    <div class="city-selector">
+                        <select id="citySelect">
+                            <option value="krasnoyarsk">Красноярск</option>
+                            <option value="irkutsk">Иркутск</option>
+                            <option value="samara">Самара</option>
+                            <option value="vladivostok">Владивосток</option>
+                            <option value="moscow">Москва</option>
+                        </select>
+                    </div>
+                    
+                    <div class="contact-buttons">
+                        <button class="btn-contact" id="callBtn">
+                            <span class="icon">📞</span>
+                            Позвонить
+                        </button>
+                        <button class="btn-contact" id="chatBtn">
+                            <span class="icon">💬</span>
+                            Написать
+                        </button>
+                    </div>
+                    
+                    <button class="btn-login" id="loginBtn">Личный кабинет</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Профессиональное ведение бухгалтерского учета для вашего бизнеса</h2>
+                <p class="hero-subtitle">Освободите время для развития бизнеса, доверив учет профессионалам. Гарантируем точность, своевременность и полное соответствие законодательству.</p>
+                <button class="btn-primary" id="heroContactBtn">Задать вопрос</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Бухгалтерский учет</h3>
+                    <p>Полное ведение бухгалтерского учета с подготовкой отчетности</p>
+                    <button class="btn-service" data-service="accounting">Оставить заявку</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3>Расчет заработной платы</h3>
+                    <p>Точный расчет зарплаты, больничных, отпускных и налогов</p>
+                    <button class="btn-service" data-service="salary">Оставить заявку</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Налоговый учет</h3>
+                    <p>Ведение налогового учета и своевременная подача деклараций</p>
+                    <button class="btn-service" data-service="tax">Оставить заявку</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Ведение любых учетов</h3>
+                    <p>Управленческий, складской и другие виды специализированного учета</p>
+                    <button class="btn-service" data-service="other">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-content">
+                <div class="proof-stats">
+                    <div class="stat">
+                        <span class="stat-number">97%</span>
+                        <span class="stat-text">клиентов обращаются повторно</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-text">довольных клиентов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-text">лет безупречной работы</span>
+                    </div>
+                </div>
+                <div class="proof-text">
+                    <h3>Почему клиенты выбирают нас снова и снова?</h3>
+                    <ul>
+                        <li>Индивидуальный подход к каждому клиенту</li>
+                        <li>Прозрачность всех процессов и расчетов</li>
+                        <li>Своевременное выполнение всех обязательств</li>
+                        <li>Постоянная поддержка и консультации</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="accordion" id="reviewsAccordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" data-target="review1">
+                        <h3>ООО "ТехноСтрой" - Строительная компания</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content" id="review1">
+                        <p>"Сотрудничаем с ИКИТ СИЛА уже третий год. Очень довольны качеством ведения учета и оперативностью решения вопросов. Особенно хочется отметить профессионализм в области налогового планирования."</p>
+                        <div class="review-author">— Директор ООО "ТехноСтрой"</div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header" data-target="review2">
+                        <h3>ИП Смирнов А.В. - Торговля</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content" id="review2">
+                        <p>"Перешел к ним после неудачного опыта с другой компанией. Здесь все четко, понятно, без скрытых платежей. Всегда на связи, быстро отвечают на вопросы."</p>
+                        <div class="review-author">— ИП Смирнов А.В.</div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header" data-target="review3">
+                        <h3>ООО "МедЦентр" - Медицинские услуги</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content" id="review3">
+                        <p>"Сложная специфика медицинского бизнеса требует особого подхода к учету. Команда ИКИТ СИЛА отлично справляется с этой задачей. Рекомендуем!"</p>
+                        <div class="review-author">— Главный врач ООО "МедЦентр"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" data-target="faq1">
+                        <h3>Какие документы нужны для начала сотрудничества?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content" id="faq1">
+                        <p>Для начала работы потребуются: учредительные документы, справки из банков, данные о сотрудниках, информация о текущих операциях. Полный список предоставим при заключении договора.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header" data-target="faq2">
+                        <h3>Как быстро вы сможете взять учет на обслуживание?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content" id="faq2">
+                        <p>Обычно процесс передачи учета занимает 3-5 рабочих дней. В срочных случаях можем организовать передачу за 1-2 дня.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header" data-target="faq3">
+                        <h3>Предоставляете ли вы отчеты о проделанной работе?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content" id="faq3">
+                        <p>Да, ежемесячно предоставляем детальные отчеты о всех выполненных операциях, а также аналитические справки по финансовому состоянию компании.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header" data-target="faq4">
+                        <h3>Какова стоимость ваших услуг?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content" id="faq4">
+                        <p>Стоимость зависит от объема операций и сложности учета. Базовый пакет от 15 000 рублей в месяц. Точную стоимость рассчитаем после анализа вашего бизнеса.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <h2 class="section-title">Наши клиенты и партнеры</h2>
+            <div class="accordion" id="partnersAccordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" data-target="partners1">
+                        <h3>Образовательные учреждения</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content" id="partners1">
+                        <div class="partners-grid">
+                            <div class="partner-item">
+                                <div class="partner-logo">🎓</div>
+                                <span>СФУ</span>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-logo">🏫</div>
+                                <span>КрасГМУ</span>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-logo">📚</div>
+                                <span>КГПУ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header" data-target="partners2">
+                        <h3>Государственные учреждения</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content" id="partners2">
+                        <div class="partners-grid">
+                            <div class="partner-item">
+                                <div class="partner-logo">🏛️</div>
+                                <span>Администрация города</span>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-logo">⚖️</div>
+                                <span>Арбитражный суд</span>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-logo">🏥</div>
+                                <span>Краевая больница</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Form Section -->
+    <section class="review-form-section">
+        <div class="container">
+            <h2 class="section-title">Оставить отзыв</h2>
+            <form class="review-form" id="reviewForm">
+                <div class="form-group">
+                    <label for="reviewName">Ваше имя</label>
+                    <input type="text" id="reviewName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewCompany">Компания</label>
+                    <input type="text" id="reviewCompany" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="reviewText">Ваш отзыв</label>
+                    <textarea id="reviewText" name="review" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="reviewRating">Оценка</label>
+                    <div class="rating">
+                        <span class="star" data-rating="1">⭐</span>
+                        <span class="star" data-rating="2">⭐</span>
+                        <span class="star" data-rating="3">⭐</span>
+                        <span class="star" data-rating="4">⭐</span>
+                        <span class="star" data-rating="5">⭐</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Отправить отзыв</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Наш офис</h2>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>📍 г. Красноярск, ул. Дачная, 37</p>
+                    <p>📞 +7 (391) 123-45-67</p>
+                    <p>✉️ info@ikit-sila.ru</p>
+                    <p>🕒 Пн-Пт: 9:00-18:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li>Бухгалтерский учет</li>
+                        <li>Расчет заработной платы</li>
+                        <li>Налоговый учет</li>
+                        <li>Консультации</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Документы</h3>
+                    <ul>
+                        <li><a href="#" id="privacyLink">Политика конфиденциальности</a></li>
+                        <li><a href="#" id="agreementLink">Согласие на обработку данных</a></li>
+                        <li><a href="#" id="termsLink">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ИКИТ СИЛА. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Связаться с нами</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="contactName">Ваше имя</label>
+                    <input type="text" id="contactName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactPhone">Телефон</label>
+                    <input type="tel" id="contactPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Сообщение</label>
+                    <textarea id="contactMessage" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Заявка на услугу</h2>
+            <form id="serviceForm">
+                <div class="form-group">
+                    <label for="serviceName">Ваше имя</label>
+                    <input type="text" id="serviceName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="servicePhone">Телефон</label>
+                    <input type="tel" id="servicePhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceType">Услуга</label>
+                    <input type="text" id="serviceType" name="service" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="serviceDescription">Описание задачи</label>
+                    <textarea id="serviceDescription" name="description" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход в личный кабинет</h2>
+            <form id="authForm">
+                <div class="form-group">
+                    <label for="authEmail">Email</label>
+                    <input type="email" id="authEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="authPassword">Пароль</label>
+                    <input type="password" id="authPassword" name="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Войти</button>
+                <p class="auth-links">
+                    <a href="#" id="registerLink">Регистрация</a> | 
+                    <a href="#" id="forgotLink">Забыли пароль?</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
